@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Awan — Multimedia Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f6f4ef;--card:#fff;--ink:#16161a;--mute:#6b6b73;--line:#e3e0d8;--acc:#ff5a36;--chip:#ebe8e0;--nav:#16161a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0e11;--card:#18181d;--ink:#f3f1ec;--mute:#9a9aa3;--line:#2a2a31;--acc:#ff7a59;--chip:#23232a;--nav:#000}}
+:root[data-theme="dark"]{--bg:#0e0e11;--card:#18181d;--ink:#f3f1ec;--mute:#9a9aa3;--line:#2a2a31;--acc:#ff7a59;--chip:#23232a;--nav:#000}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.55 Inter,system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+nav{background:var(--nav);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:18px 5vw;position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.logo{font:700 22px Fraunces,serif;letter-spacing:-.5px}.logo i{color:var(--acc);font-style:normal}
+nav .links{display:flex;gap:26px;font-size:14px;opacity:.85}
+.btn{display:inline-block;border:0;border-radius:6px;padding:11px 20px;font:500 14px Inter;cursor:pointer;background:var(--acc);color:#fff}
+.btn.ghost{background:transparent;border:1px solid #ffffff55;color:#fff;margin-right:8px}
+.wrap{display:grid;grid-template-columns:300px 1fr;gap:48px;padding:48px 5vw 80px;max-width:1500px;margin:auto}
+aside{position:sticky;top:96px;align-self:start}
+.av{width:120px;height:120px;border-radius:50%;background:conic-gradient(from 200deg,#ff5a36,#ffb199,#6a4cff,#1ec8c8,#ff5a36);display:grid;place-items:center;margin-bottom:18px}
+.av span{width:104px;height:104px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:700 44px Fraunces,serif}
+.handle{color:var(--mute)}h1{font:700 42px/1.05 Fraunces,serif;margin:2px 0 12px;letter-spacing:-1px}
+.badge{display:inline-flex;gap:8px;align-items:center;background:var(--chip);border-radius:99px;padding:8px 16px;font-weight:500}
+.badge b{color:var(--acc);font-style:italic}
+.meta{list-style:none;padding:0;margin:22px 0;color:var(--mute);display:grid;gap:8px}
+.meta a{color:var(--acc);font-weight:500}
+hr{border:0;border-top:2px solid var(--line);margin:22px 0}
+h4{margin:0 0 10px;font-size:12px;font-weight:500;color:var(--mute);text-transform:uppercase;letter-spacing:.8px}
+aside .btn{width:100%;padding:14px;margin:8px 0 22px;text-align:center}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}.tags span{background:var(--chip);padding:6px 12px;border-radius:4px;font-size:13px}
+.svc{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.svc li:before{content:"✓";display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--acc);color:#fff;font-size:12px;margin-right:12px}
+.hero{border-radius:14px;overflow:hidden;background:#000;display:grid;grid-template-columns:repeat(3,1fr);aspect-ratio:16/9.2}
+.hero div{position:relative;display:flex;align-items:flex-end;padding:18px;color:#fff;font:700 clamp(14px,2vw,26px)/1.1 Fraunces,serif;overflow:hidden}
+.hero div small{font:500 11px Inter;letter-spacing:1px;text-transform:uppercase;display:block;opacity:.8;margin-bottom:4px}
+.hero div:first-child{font-size:clamp(34px,7vw,110px);line-height:.85;letter-spacing:-3px;align-items:center;justify-content:center;background:#fff;color:#000}
+.hero div:after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");mix-blend-mode:overlay;pointer-events:none}
+.sec{margin-top:56px}.sec>h4{margin-bottom:6px}
+.about{font:500 clamp(22px,2.6vw,32px)/1.25 Fraunces,serif;max-width:760px;margin:0 0 14px}
+.sub{color:var(--mute);max-width:640px}
+.stats{display:flex;gap:40px;margin-top:24px;flex-wrap:wrap}.stats b{font:700 34px Fraunces,serif;display:block}.stats span{color:var(--mute);font-size:13px}
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:28px;overflow-x:auto}
+.tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:12px 16px;font:500 15px Inter;color:var(--mute);cursor:pointer;white-space:nowrap}
+.tabs button.on{color:var(--ink);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px}
+.card{cursor:pointer}.thumb{aspect-ratio:4/3;border-radius:10px;position:relative;overflow:hidden;border:1px solid var(--line);transition:transform .3s}
+.card:hover .thumb{transform:translateY(-4px)}
+.thumb:after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E");mix-blend-mode:overlay}
+.play{position:absolute;inset:0;margin:auto;width:54px;height:54px;border-radius:50%;background:#ffffffd9;display:grid;place-items:center;z-index:1;color:#000}
+.row{display:flex;justify-content:space-between;margin-top:10px;font-weight:500}.row span{color:var(--mute);font-weight:400;font-size:13px}
+.row .h{cursor:pointer;user-select:none}.row .h.on{color:var(--acc)}
+.contact{background:var(--ink);color:var(--bg);border-radius:14px;padding:clamp(28px,5vw,60px);margin-top:70px}
+.contact h2{font:700 clamp(30px,5vw,56px)/1 Fraunces,serif;margin:0 0 16px;letter-spacing:-1.5px}
+.contact .btn{margin-top:12px}
+footer{border-top:1px solid var(--line);padding:30px 5vw;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--mute);font-size:13px}
+@media(max-width:900px){.wrap{grid-template-columns:1fr;gap:32px}aside{position:static}nav .links{display:none}.hero{aspect-ratio:3/2.4}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="#">awan<i>.</i></a>
+  <div class="links"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  <div><a class="btn ghost" href="#work">View work</a><a class="btn" href="#contact">Get in touch</a></div>
+</nav>
+
+<div class="wrap">
+<aside>
+  <div class="av"><span>A</span></div>
+  <div class="handle">@awan</div>
+  <h1>Awan</h1>
+  <div class="badge"><b>✦</b> Multimedia Specialist</div>
+  <ul class="meta">
+    <li>📅 Creating since 2020</li>
+    <li>📍 Malang, Indonesia</li>
+    <li>🌐 English · Bahasa Indonesia</li>
+    <li><a href="#contact">↗ Say hello</a></li>
+  </ul>
+  <hr>
+  <h4>Hire Awan</h4>
+  <a class="btn" href="#contact">Hire me</a>
+  <h4>Specialties</h4>
+  <div class="tags"><span>Design</span><span>Videography</span><span>Photography</span></div>
+  <h4>Services offered</h4>
+  <ul class="svc"><li>Graphic &amp; Brand Design</li><li>Video Production &amp; Editing</li><li>Photography (Food · People · Place)</li><li>Motion &amp; Animation</li><li>Creative Direction</li></ul>
+</aside>
+
+<main>
+  <div class="hero" id="hero"></div>
+
+  <section class="sec" id="about">
+    <h4>About</h4>
+    <p class="about">Awan is a multimedia specialist who turns ideas into images, films and identities people remember.</p>
+    <p class="sub">Part designer, part cinematographer, part photographer — with a stage background that shapes how I frame a story: where the light falls, when the cut lands, how a face holds a moment.</p>
+    <div class="stats"><div><b>120+</b><span>Projects delivered</span></div><div><b>3</b><span>Disciplines, one voice</span></div><div><b>40+</b><span>Happy clients</span></div></div>
+  </section>
+
+  <section class="sec" id="work">
+    <h4>Selected work</h4>
+    <div class="tabs" id="tabs"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Let's make something<br>worth watching.</h2>
+    <p style="opacity:.75;max-width:480px">Brand identity, a campaign film, a food shoot or a full visual rebrand — tell me what you're dreaming up.</p>
+    <a class="btn" href="mailto:hello@example.com">hello@example.com</a>
+  </section>
+</main>
+</div>
+<footer><span>© 2026 Awan. All rights reserved.</span><span>Design · Video · Photo</span></footer>
+
+<script>
+const G=(a,b,c)=>`radial-gradient(circle at 25% 20%,${c},transparent 55%),linear-gradient(135deg,${a},${b})`;
+const hero=[
+ ['AWAN','#fff','#fff'],
+ ['A theatre for every frame','Design',G('#3a1c9e','#ff4fa3','#ffc9e6')],
+ ['Stories in motion','Video',G('#050505','#222','#ff5a36')],
+ ['Taste the light','Photography · Food',G('#ff8a1f','#b33a00','#ffd29a')],
+ ['Faces & places','Photography',G('#06251f','#0b5a4a','#4ee3c1')],
+ ['Brand worlds','Design',G('#6fb3d9','#bcdcec','#fff')]
+];
+document.getElementById('hero').innerHTML=hero.map((h,i)=>i?`<div style="background:${h[2]}"><span><small>${h[1]}</small>${h[0]}</span></div>`:`<div>AWAN</div>`).join('');
+const work=[
+ ['Design','Lumen Brand Identity','Branding',G('#2b1b6b','#ff5a36','#ffd0c2')],
+ ['Design','Poster Series: Stagelight','Poster',G('#111','#6a4cff','#ff4fa3')],
+ ['Design','Kopi Kita Packaging','Packaging',G('#8a4b1f','#e9b872','#fff1d6')],
+ ['Video','Midnight Rehearsal','Short film',G('#05070d','#1b2a5a','#5a7bff'),1],
+ ['Video','Batik Reimagined','Brand film',G('#3b0d0d','#c4452d','#ffb27a'),1],
+ ['Video','Street Food Diaries','Documentary',G('#1a1200','#7a5a00','#ffd34e'),1],
+ ['Food','Golden Hour Tasting','Photography · Food',G('#a33a00','#ffb347','#fff0c4')],
+ ['Food','Green Table','Photography · Food',G('#12361f','#6fbf73','#e1ffd9')],
+ ['People','Backstage Portraits','Photography · People',G('#201020','#8f3b6f','#ffc4e6')],
+ ['People','Hands of the Craft','Photography · People',G('#2a2118','#a98467','#f3dfc8')],
+ ['Place','Mist over Bromo','Photography · Place',G('#1b2735','#7aa2c4','#f0f6ff')],
+ ['Place','Malang Rooftops','Photography · Place',G('#3a1630','#ff8a5c','#ffe0a8')]
+];
+const cats=['All','Design','Video','Food','People','Place'];
+const names={Food:'Photo · Food',People:'Photo · People',Place:'Photo · Place'};
+let cur='All';const liked={};
+function render(){
+ document.getElementById('tabs').innerHTML=cats.map(c=>`<button class="${c==cur?'on':''}" data-c="${c}">${names[c]||c}</button>`).join('');
+ document.getElementById('grid').innerHTML=work.map((w,i)=>(cur=='All'||w[0]==cur)?`<div class="card"><div class="thumb" style="background:${w[3]}">${w[4]?'<div class="play">▶</div>':''}</div><div class="row"><div>${w[1]}<br><span>${w[2]}</span></div><div class="h ${liked[i]?'on':''}" data-i="${i}">♥ ${(i*7+12)+(liked[i]?1:0)}</div></div></div>`:'').join('');
+}
+document.addEventListener('click',e=>{
+ const t=e.target.closest('[data-c]');if(t){cur=t.dataset.c;render()}
+ const h=e.target.closest('[data-i]');if(h){liked[h.dataset.i]=!liked[h.dataset.i];render()}
+});
+render();
+</script>
+</body>
+</html>
